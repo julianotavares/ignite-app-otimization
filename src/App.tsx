@@ -7,8 +7,11 @@ import { api } from './services/api';
 
 import './styles/global.scss';
 
+import './styles/global.scss';
+
 import './styles/sidebar.scss';
 import './styles/content.scss';
+import { useCallback } from 'react';
 
 interface GenreResponseProps {
   id: number;
@@ -51,9 +54,9 @@ export function App() {
     })
   }, [selectedGenreId]);
 
-  function handleClickButton(id: number) {
+  const handleClickButton = useCallback((id: number) => {
     setSelectedGenreId(id);
-  }
+  }, [])
 
   return (
     <div style={{ display: 'flex', flexDirection: 'row' }}>

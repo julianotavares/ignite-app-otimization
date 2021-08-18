@@ -11,10 +11,10 @@ interface SideBarProps {
 }
 
 export function SideBar({
-  genres,
-  selectedGenreId,
-  buttonClickCallback
-}: SideBarProps) {
+                          genres,
+                          selectedGenreId,
+                          buttonClickCallback
+                        }: SideBarProps) {
   return (
     <nav className="sidebar">
       <span>Watch<p>Me</p></span>
